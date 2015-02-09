@@ -161,7 +161,6 @@
     <Compile Include="ReferenceList.vb" />
     <Compile Include="SmartTagMenu\SmartTagItemEx.vb" />
     <Compile Include="SmartTagMenu\ReferenceSmartTagItem.vb" />
-    <Compile Include="SmartTagMenu\ReferenceColors.vb" />
     <Compile Include="MainUI\Controls\ReferenceListEditor.Designer.vb">
       <DependentUpon>ReferenceListEditor.vb</DependentUpon>
     </Compile>
@@ -175,7 +174,7 @@
     <Compile Include="MainUI\Controls\ReferenceListView.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="SmartTagMenu\SmartTagColors.vb" />
+    <Compile Include="SmartTagMenu\ReferenceColors.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="MainUI\Controls\FilePicker.resx">

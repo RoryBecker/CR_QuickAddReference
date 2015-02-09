@@ -1,27 +1,52 @@
 Option Strict On
-Imports System.ComponentModel
 Imports System.Drawing
-Imports System.Windows.Forms
 Imports DevExpress.CodeRush.Core
-Imports DevExpress.CodeRush.PlugInCore
-Imports DevExpress.CodeRush.StructuralParser
-Imports EnvDTE
-Imports System.IO
 
 Public Class ReferenceColors
-    Inherits SmartTagColors
-
-
-    Public Overrides ReadOnly Property Dark() As System.Drawing.Color
+    Inherits SmartTagPopupMenuColors
+    Protected Overrides Function GetSubGroupName() As String
+        Return "Quick Reference"
+    End Function
+    Protected Overrides ReadOnly Property Dark As SmartTagPopupMenuColors.ColorSet
         Get
-            Return Color.FromArgb(&HFB, &H3B, &H8A)
+            Return New SmartTagPopupMenuColors.ColorSet() With {
+                ._MenuTextColor = Color.FromArgb(&H55, &H71, &H60),
+                ._MenuBackgroundColor = Color.FromArgb(&HF9, &HFB, &HFA),
+                ._MenuSelectedTextColor = Color.FromArgb(&HFF, &HFF, &HFF),
+                ._MenuSelectedBackgroundColor = Color.FromArgb(&H84, &HC7, &H87),
+                ._MenuSelectedBorderColor = Color.FromArgb(&H2E, &H58, &H47),
+                ._MenuBorderRightOuterColor = Color.FromArgb(&H7D, &HD7, &H9C),
+                ._MenuBorderRightInnerColor = Color.FromArgb(&HB2, &HE8, &HC4),
+                ._MenuBorderLeftOuterColor = Color.FromArgb(&HC3, &HF0, &HD4),
+                ._MenuBorderLeftInnerColor = Color.FromArgb(&HBA, &HEE, &HCE),
+                ._MenuBorderTopColor = Color.FromArgb(&HBA, &HEE, &HCE),
+                ._MenuBorderBottomColor = Color.FromArgb(&H7D, &HD7, &H9C),
+                ._TitleTextColor = Color.FromArgb(&H88, &HE0, &HAB),
+                ._TitleBackgroundColor = Color.FromArgb(&HF1, &HFF, &HF6),
+                ._TitleActiveTextColor = Color.FromArgb(&H88, &HE0, &HAB),
+                ._TitleActiveBackgroundColor = Color.FromArgb(&HF1, &HFF, &HF6)
+      }
         End Get
     End Property
-
-    Public Overrides ReadOnly Property Light() As System.Drawing.Color
+    Protected Overrides ReadOnly Property Light As SmartTagPopupMenuColors.ColorSet
         Get
-            Return Color.FromArgb(&HFD, &H95, &HC0)
+            Return New SmartTagPopupMenuColors.ColorSet() With {
+                ._MenuTextColor = Color.FromArgb(&H55, &H71, &H60),
+                ._MenuBackgroundColor = Color.FromArgb(&HF9, &HFB, &HFA),
+                ._MenuSelectedTextColor = Color.FromArgb(&HFF, &HFF, &HFF),
+                ._MenuSelectedBackgroundColor = Color.FromArgb(&H84, &HC7, &H87),
+                ._MenuSelectedBorderColor = Color.FromArgb(&H2E, &H58, &H47),
+                ._MenuBorderRightOuterColor = Color.FromArgb(&H7D, &HD7, &H9C),
+                ._MenuBorderRightInnerColor = Color.FromArgb(&HB2, &HE8, &HC4),
+                ._MenuBorderLeftOuterColor = Color.FromArgb(&HC3, &HF0, &HD4),
+                ._MenuBorderLeftInnerColor = Color.FromArgb(&HBA, &HEE, &HCE),
+                ._MenuBorderTopColor = Color.FromArgb(&HBA, &HEE, &HCE),
+                ._MenuBorderBottomColor = Color.FromArgb(&H7D, &HD7, &H9C),
+                ._TitleTextColor = Color.FromArgb(&H88, &HE0, &HAB),
+                ._TitleBackgroundColor = Color.FromArgb(&HF1, &HFF, &HF6),
+                ._TitleActiveTextColor = Color.FromArgb(&H88, &HE0, &HAB),
+                ._TitleActiveBackgroundColor = Color.FromArgb(&HF1, &HFF, &HF6)
+    }
         End Get
     End Property
 End Class
-
